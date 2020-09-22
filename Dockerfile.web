@@ -1,0 +1,5 @@
+FROM chartmuseum/chartmuseum:v0.12.0
+
+COPY /bin/boot /bin/boot
+
+CMD /bin/boot

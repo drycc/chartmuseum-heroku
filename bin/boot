@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# This script is designed to be run inside the container
+#
+
+# fail hard and fast even on pipelines
+set -eo pipefail
+
+/chartmuseum \
+  --cache=redis \
+  --cache-redis-addr=$REDIS_ADDR \
+  --cache-redis-password=$REDIS_PASSWORD
